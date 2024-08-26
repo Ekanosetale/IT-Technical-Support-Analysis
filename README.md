@@ -3,6 +3,7 @@
 **Introduction** 
 
 This report provides a comprehensive analysis of technical support operations based on the dataset provided. The objective is to examine key performance indicators (KPIs) related to ticket volume, content, resolution, and overall performance, in line with the focus areas outlined in the brief. The report will highlight trends in ticket creation, resolution times, agent performance, and adherence to Service Level Agreements (SLAs).
+**About The Dataset**
 
 1. **Ticket Volume Trends:**
 
