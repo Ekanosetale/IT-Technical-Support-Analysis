@@ -4,6 +4,48 @@
 
 This report provides a comprehensive analysis of technical support operations based on the dataset provided. The objective is to examine key performance indicators (KPIs) related to ticket volume, content, resolution, and overall performance, in line with the focus areas outlined in the brief. The report will highlight trends in ticket creation, resolution times, agent performance, and adherence to Service Level Agreements (SLAs).
 **About The Dataset**
+*Status*:Ticket Status in Support Pipeline. (Open: a new ticket awaiting processing, In Progress: Currently being addressed by an agent, Resolved: Solution has been provided. Closed: Customer has confirmed the ticket's closure.)
+
+*Ticket ID:* Unique Ticket Number.
+
+*Source:* Channel of Request (chat, phone, email).
+
+*Priority:* Ticket Urgency (low, medium, high).
+
+*Support Level:* Ticket Difficulty Level (Tier 1, Tier2).
+*Product group:* Product group to which the request pertains.
+
+*Topic:* Subject matter of the customer's inquiry.
+
+*Agent Group:* Agent group to whom the agent belongs (1st level support, 2nd level support).
+
+*Agent Name:* Agent currently handling the ticket.
+
+*Created time:* Timestamp indicating when the ticket was received.
+
+*Expected SLA to first response:* Deadline for providing the initial response.
+
+*First response time:* Timestamp of the initial response.
+
+*SLA For first response:* First Response Compliance (Within SLA, SLA Violated).
+
+*Expected SLA to resolve:* Deadline for resolving the ticket.
+
+*Resolution time:* Timestamp of ticket resolution.
+
+*SLA For Resolution:* Resolution Compliance (Within SLA, SLA Violated).
+
+*Close time:* Timestamp of ticket closure.
+
+*Agent interactions:* Total count of agent interactions for each ticket.
+
+*Survey results:* Customer Satisfaction Rating: Feedback score on a scale of 1 to 5.
+
+*Country:* Country of origin for the customer creating the ticket.	
+
+*Latitude:* Country Coordinates: Latitude
+
+*Longitude:* Country Coordinates: Longitude
 
 1. **Ticket Volume Trends:**
 
