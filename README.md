@@ -53,7 +53,85 @@ The dataset contains 2,330 entries and 22 columns related to technical support t
 
 *Longitude:* Country Coordinates: Longitude
 
-**Data Cleaning**
+**Data Cleaning and Transformation ETL**
+
+
+Memory updated
+Here’s a revised version of your report text:
+
+The dataset was imported into Power BI as an Excel workbook and then loaded into Power Query for further processing. First, I promoted the first row to headers, and then split columns containing both date and time into separate date and time columns. A new column for Rating was created, where star symbols were assigned based on the rating scores. Several columns were renamed to better reflect the data they contained, and a calendar table was created using the following DAX expression:
+
+Calendar = 
+VAR BaseCalendar = 
+    CALENDARAUTO()
+RETURN
+ADDCOLUMNS(
+         BaseCalendar,
+         "Year", YEAR([Date]),
+         "Quarter", QUARTER([Date]),
+         "Month No", MONTH([Date]),
+         "Week Num", WEEKNUM([Date]),
+         "Week Day", WEEKDAY([Date]),
+         "Day", DAY([Date]),
+         "Month Name", FORMAT([Date], "MMM"),
+         "Month N",FORMAT([Date],"MM"),
+         "Week Day Name", FORMAT([Date],"ddd"),
+         "Week", FORMAT([Date], "dddd"),
+         "Quater Number", "Q" & QUARTER([Date]),
+         "Year Month", FORMAT([Date], "YYYY MMMM"),
+         "Weekending", [Date] + (7 - WEEKDAY([Date])),
+         "Weekday Weekend",
+         IF
+            (WEEKDAY([Date]) IN {1,7}, "Weekend",
+         "Weekday"
+
+Additionally, numerous measures were created to enable a comprehensive analysis. To keep the report concise, I won’t delve into the details of each measure, but here is an example of one of the DAX expressions used for these measures:
+
+_avg SLA FR DoD = 
+VAR ProvDaySLA = 
+    CALCULATE(
+        [_Avg SLA FR],
+        DATEADD('Calendar'[Date], -1, DAY)
+    )
+VAR SLA = [_Avg SLA FR]
+VAR DoDChange = 
+    SLA - ProvDaySLA
+RETURN
+    IF(
+        ISBLANK(DoDChange),
+        "No Change",
+        IF(
+            DoDChange > 0,
+            "+" & FORMAT(DoDChange, "0") & " min from Yesterday",
+            FORMAT(DoDChange, "0") & " min from Yesterday"
+        )
+    )
+
+and
+
+_In Progress ticket DOD = 
+VAR PrevDayTickets = 
+    CALCULATE(
+        [_In Progress Ticket],
+        DATEADD('Calendar'[Date], -1, DAY)
+    )
+    VAR Tickets = 
+         VAR TotalTickets = [_In Progress Ticket]
+         RETURN
+         IF(
+            ISBLANK(TotalTickets),
+            0,
+            TotalTickets
+         )
+         VAR DoDChange = 
+         IF(ISBLANK(PrevDayTickets) || ISBLANK(Tickets),
+         BLANK(),
+         Tickets - PrevDayTickets
+         )
+         RETURN
+             IF(
+            ISBLANK(DoDChange),
+            "No Change",
 
 1. **Ticket Volume Trends:**
 
