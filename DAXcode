@@ -1,0 +1,128 @@
+-----  To Create a calender table
+Calendar = 
+VAR BaseCalendar = 
+    CALENDARAUTO()
+RETURN
+ADDCOLUMNS(
+         BaseCalendar,
+         "Year", YEAR([Date]),
+         "Quarter", QUARTER([Date]),
+         "Month No", MONTH([Date]),
+         "Week Num", WEEKNUM([Date]),
+         "Week Day", WEEKDAY([Date]),
+         "Day", DAY([Date]),
+         "Month Name", FORMAT([Date], "MMM"),
+         "Month N",FORMAT([Date],"MM"),
+         "Week Day Name", FORMAT([Date],"ddd"),
+         "Week", FORMAT([Date], "dddd"),
+         "Quater Number", "Q" & QUARTER([Date]),
+         "Year Month", FORMAT([Date], "YYYY MMMM"),
+         "Weekending", [Date] + (7 - WEEKDAY([Date])),
+         "Weekday Weekend",
+         IF
+            (WEEKDAY([Date]) IN {1,7}, "Weekend",
+         "Weekday"
+
+---- For average SLA first response
+Avg SLA FR = 
+ AVERAGEX(
+    FILTER(
+        'Technical Support',
+        NOT ISBLANK('Technical Support'[First response Time])
+    ),
+    DATEDIFF(
+        'Technical Support'[Created Time],
+        'Technical Support'[First response Time],
+        MINUTE
+    )
+)
+
+----For average SLA first response Day Over Day
+_avg SLA FR DoD = 
+VAR ProvDaySLA = 
+    CALCULATE(
+        [_Avg SLA FR],
+        DATEADD('Calendar'[Date], -1, DAY)
+    )
+VAR SLA = [_Avg SLA FR]
+VAR DoDChange = 
+    SLA - ProvDaySLA
+RETURN
+    IF(
+        ISBLANK(DoDChange),
+        "No Change",
+        IF(
+            DoDChange > 0,
+            "+" & FORMAT(DoDChange, "0") & " min from Yesterday",
+            FORMAT(DoDChange, "0") & " min from Yesterday"
+        )
+    )
+
+---- For average SLA overall response
+_Avg SLA Overall R = 
+AVERAGEX(
+       FILTER(
+        'Technical Support',
+        NOT ISBLANK('Technical Support'[Resolution Time])
+       ),
+       DATEDIFF(
+            'Technical Support'[Created Time],
+            'Technical Support'[Resolution Time],
+            MINUTE
+       )
+)
+
+-----For in progress tickets Day Over Day
+_In Progress ticket DOD = 
+VAR PrevDayTickets = 
+    CALCULATE(
+        [_In Progress Ticket],
+        DATEADD('Calendar'[Date], -1, DAY)
+    )
+    VAR Tickets = 
+         VAR TotalTickets = [_In Progress Ticket]
+         RETURN
+         IF(
+            ISBLANK(TotalTickets),
+            0,
+            TotalTickets
+         )
+         VAR DoDChange = 
+         IF(ISBLANK(PrevDayTickets) || ISBLANK(Tickets),
+         BLANK(),
+         Tickets - PrevDayTickets
+         )
+         RETURN
+             IF(
+            ISBLANK(DoDChange),
+            "No Change",
+
+-----
+  _Resolved Ticket = CALCULATE([_Total Ticket],'Technical Support'[Status]= "Resolved")
+
+----- For SLA achieved first response
+_SlaAchievedFR 2 = 
+VAR TotalTickets = [_Total Ticket]
+VAR TicketsWithinSLA = CALCULATE([_Total Ticket],'Technical Support'[SLA For first response]= "Within SLA")
+RETURN
+TicketsWithinSLA & "out of " & TotalTickets
+
+----Color code
+_Ticket gradient = 
+SWITCH(
+    TRUE(),
+    [_Total Ticket]<5, "#ffffff",
+    [_Total Ticket]<10, "#def3fe",
+    [_Total Ticket]<15, "#bce7fc",
+    [_Total Ticket]<20, "#8ED9F8",
+    [_Total Ticket]<25, "#37B8FC",
+    "#1B96CF")
+
+----_Total Ticket % = 
+DIVIDE([_Total Ticket],
+CALCULATE([_Total Ticket],
+ALL('Technical Support')
+))
+
+-----
+_Violated SLA R = CALCULATE([_Total Ticket], 'Technical Support'[SLA For Resolution]= "SLA Violated")
