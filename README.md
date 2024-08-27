@@ -88,7 +88,7 @@ Tickets are predominantly related to "Product setup" and "Pricing and licensing,
 
 4. **Performance Metrics:**
 
-![](TS4.jpg)
+![](TS5.jpg)
 
 Operational Efficiency: Topics like Purchasing and Invoicing show relatively low interaction counts and moderate resolution times, indicating a potential benchmark for efficiency that could be replicated across other categories.
 
