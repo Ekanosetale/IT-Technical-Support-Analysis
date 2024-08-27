@@ -82,13 +82,13 @@ Ticket Distribution: The distribution of tickets is skewed towards standard work
 
 First Response and Resolution Times: While 86.65% of tickets met the SLA for first response, the resolution SLA adherence is lower, with only 66.39% of tickets resolved within the target SLA. This indicates a need for improvement in resolution times, especially for high-priority tickets.
 
+SLA Adherence: The overall SLA adherence for first responses stands at 86.65%, with 13.35% of tickets violating the SLA. The resolution SLA is violated more frequently, with 33.61% of tickets failing to meet the target time.
+
 Tickets are predominantly related to "Product setup" and "Pricing and licensing," followed by "Feature requests" and "Bug reports." This suggests a strong demand for support in product onboarding and pricing-related queries.
 
 4. **Performance Metrics:**
 
 ![](TS4.jpg)
-
-SLA Adherence: The overall SLA adherence for first responses stands at 86.65%, with 13.35% of tickets violating the SLA. The resolution SLA is violated more frequently, with 33.61% of tickets failing to meet the target time.
 
 Agent Performance: Agents like Nicola Wane and Sheela Cutten have high ticket volumes with commendable SLA adherence. However, Kristos Westoll and Adolpho Messingham show higher SLA violations, indicating areas for performance improvement. The average rating of agent interactions varies, with higher ratings typically correlating with better SLA adherence.
 
