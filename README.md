@@ -96,7 +96,9 @@ Agent Performance: Agents like Nicola Wane and Sheela Cutten have high ticket vo
 **Recommendations:**
 
 Enhance SLA Adherence: Implement stricter monitoring and automated alerts to ensure timely responses and resolutions, particularly for high-priority tickets.
+
 Optimize Support Channels: Invest in improving chat support to reduce SLA violations and enhance customer experience in real-time interactions.
+
 Agent Training and Development: Provide targeted training for agents with higher SLA violation rates and focus on areas where tickets are most frequent, such as product setup.
 
 
