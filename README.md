@@ -73,13 +73,14 @@ Ticket Distribution: The distribution of tickets is skewed towards standard work
 2. **Trends in Ticket Topics:**
    
 ![](TS2.jpg)
+
+Channel Comparison: The majority of tickets are raised via email (53%), followed by chat (36.5%) and phone (10.6%). However, chat tickets have the highest SLA violation rate, suggesting that real-time support channels might need further optimization to meet SLA targets.
+
 ![](TS3.jpg)
 
 Tickets are predominantly related to "Product setup" and "Pricing and licensing," followed by "Feature requests" and "Bug reports." This suggests a strong demand for support in product onboarding and pricing-related queries.
 
 First Response and Resolution Times: While 86.65% of tickets met the SLA for first response, the resolution SLA adherence is lower, with only 66.39% of tickets resolved within the target SLA. This indicates a need for improvement in resolution times, especially for high-priority tickets.
-
-Channel Comparison: The majority of tickets are raised via email (53%), followed by chat (36.5%) and phone (10.6%). However, chat tickets have the highest SLA violation rate, suggesting that real-time support channels might need further optimization to meet SLA targets.
 
 4. **Performance Metrics:**
 
