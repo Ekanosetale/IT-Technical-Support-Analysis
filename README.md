@@ -99,7 +99,7 @@ Additionally, numerous measures were created to enable a comprehensive analysis.
 1. **Ticket Volume Trends Insight:**
    
 
-![](TS1.jpg)
+![](TS1.1.jpg)
 
 
 Daily, Weekly, and Monthly Volumes: The analysis reveals that ticket volumes are higher on weekdays compared to weekends, with the majority of tickets being created during standard work hours. A significant drop in ticket volumes is observed during weekends and non-working hours, indicating a peak in ticket creation during regular business days and times.
@@ -108,7 +108,7 @@ Ticket Distribution: The distribution of tickets is skewed towards standard work
 
 2. **Trends in Ticket Topics Insight:**
    
-![](TS2.jpg)
+![](TS2.2.jpg)
 
 3. **Channel Comparison Insight:**
 
