@@ -55,33 +55,38 @@ The dataset contains 2,330 entries and 22 columns related to technical support t
 
 **Data Cleaning and Transformation ETL**
 
-
-Memory updated
-Here’s a revised version of your report text:
-
 The dataset was imported into Power BI as an Excel workbook and then loaded into Power Query for further processing. First, I promoted the first row to headers, and then split columns containing both date and time into separate date and time columns. A new column for Rating was created, where star symbols were assigned based on the rating scores. Several columns were renamed to better reflect the data they contained, and a calendar table was created using the following DAX expression:  ![here](DAXcode)
 
 Additionally, numerous measures were created to enable a comprehensive analysis. To keep the report concise, I won’t delve into the details of each measure, here are a few of them : ![here](DAXcode)
 
 
 1. **Ticket Volume Trends:**
+   
 
 ![](TS1.jpg)
 
+
 Daily, Weekly, and Monthly Volumes: The analysis reveals that ticket volumes are higher on weekdays compared to weekends, with the majority of tickets being created during standard work hours. A significant drop in ticket volumes is observed during weekends and non-working hours, indicating a peak in ticket creation during regular business days and times.
+
 Ticket Distribution: The distribution of tickets is skewed towards standard work hours, with 41.4% of tickets created during these times. Non-work hours see a reduced ticket volume, with late and early work hours contributing to only 16.9% of total tickets.
 
-2. **Trends in Ticket Topics:** 
+2. **Trends in Ticket Topics:**
+   
 ![](TS2.jpg)
 ![](TS3.jpg)
+
 Tickets are predominantly related to "Product setup" and "Pricing and licensing," followed by "Feature requests" and "Bug reports." This suggests a strong demand for support in product onboarding and pricing-related queries.
+
 First Response and Resolution Times: While 86.65% of tickets met the SLA for first response, the resolution SLA adherence is lower, with only 66.39% of tickets resolved within the target SLA. This indicates a need for improvement in resolution times, especially for high-priority tickets.
+
 Channel Comparison: The majority of tickets are raised via email (53%), followed by chat (36.5%) and phone (10.6%). However, chat tickets have the highest SLA violation rate, suggesting that real-time support channels might need further optimization to meet SLA targets.
 
-3. **Performance Metrics:**
+4. **Performance Metrics:**
 
 ![](TS4.jpg)
+
 SLA Adherence: The overall SLA adherence for first responses stands at 86.65%, with 13.35% of tickets violating the SLA. The resolution SLA is violated more frequently, with 33.61% of tickets failing to meet the target time.
+
 Agent Performance: Agents like Nicola Wane and Sheela Cutten have high ticket volumes with commendable SLA adherence. However, Kristos Westoll and Adolpho Messingham show higher SLA violations, indicating areas for performance improvement. The average rating of agent interactions varies, with higher ratings typically correlating with better SLA adherence.
 
 **Conclusion:**
