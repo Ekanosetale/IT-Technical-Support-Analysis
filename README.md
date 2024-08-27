@@ -106,7 +106,7 @@ Daily, Weekly, and Monthly Volumes: The analysis reveals that ticket volumes are
 
 Ticket Distribution: The distribution of tickets is skewed towards standard work hours, with 41.4% of tickets created during these times. Non-work hours see a reduced ticket volume, with late and early work hours contributing to only 16.9% of total tickets.
 
-2. **Trends in Ticket Topics:**
+2. **Trends in Ticket Topics Insight:**
    
 ![](TS2.jpg)
 
