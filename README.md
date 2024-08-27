@@ -96,7 +96,7 @@ Additionally, numerous measures were created to enable a comprehensive analysis.
 
 
 
-1. **Ticket Volume Trends:**
+1. **Ticket Volume Trends Insight:**
    
 
 ![](TS1.jpg)
@@ -110,7 +110,7 @@ Ticket Distribution: The distribution of tickets is skewed towards standard work
    
 ![](TS2.jpg)
 
-3. **Channel Comparison:**
+3. **Channel Comparison Insight:**
 
  The majority of tickets are raised via email (53%), followed by chat (36.5%) and phone (10.6%). However, chat tickets have the highest SLA violation rate, suggesting that real-time support channels might need further optimization to meet SLA targets.
 
@@ -122,9 +122,11 @@ SLA Adherence: The overall SLA adherence for first responses stands at 86.65%, w
 
 Tickets are predominantly related to "Product setup" and "Pricing and licensing," followed by "Feature requests" and "Bug reports." This suggests a strong demand for support in product onboarding and pricing-related queries.
 
-4. **Performance Metrics:**
+4. **Performance Metrics Insight:**
 
 ![](TS5.jpg)
+
+Bug reports are the most complex, both in terms of the number of interactions and the time needed to resolve them. This could be a target area for process improvements or additional training to reduce the burden on agents and improve efficiency.
 
 Operational Efficiency: Topics like Purchasing and Invoicing show relatively low interaction counts and moderate resolution times, indicating a potential benchmark for efficiency that could be replicated across other categories.
 
