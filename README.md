@@ -59,9 +59,9 @@ The dataset contains 2,330 entries and 22 columns related to technical support t
 Memory updated
 Here’s a revised version of your report text:
 
-The dataset was imported into Power BI as an Excel workbook and then loaded into Power Query for further processing. First, I promoted the first row to headers, and then split columns containing both date and time into separate date and time columns. A new column for Rating was created, where star symbols were assigned based on the rating scores. Several columns were renamed to better reflect the data they contained, and a calendar table was created using the following DAX expression:![here](DAXcode)
+The dataset was imported into Power BI as an Excel workbook and then loaded into Power Query for further processing. First, I promoted the first row to headers, and then split columns containing both date and time into separate date and time columns. A new column for Rating was created, where star symbols were assigned based on the rating scores. Several columns were renamed to better reflect the data they contained, and a calendar table was created using the following DAX expression:  ![here](DAXcode)
 
-Additionally, numerous measures were created to enable a comprehensive analysis. To keep the report concise, I won’t delve into the details of each measure, but here is an example of one of the DAX expressions used for these measures:
+Additionally, numerous measures were created to enable a comprehensive analysis. To keep the report concise, I won’t delve into the details of each measure, here are a few of them : ![here](DAXcode)
 
 
 1. **Ticket Volume Trends:**
