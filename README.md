@@ -53,6 +53,9 @@ The dataset contains 2,330 entries and 22 columns related to technical support t
 
 *Longitude:* Country Coordinates: Longitude
 
+**Tool Used:**
+ PowerBI
+
 **Data Cleaning and Transformation ETL**
 
 The dataset was imported into Power BI as an Excel workbook and then loaded into Power Query for further processing. First, I promoted the first row to headers, and then split columns containing both date and time into separate date and time columns. A new column for Rating was created, where star symbols were assigned based on the rating scores. Several columns were renamed to better reflect the data they contained, and a calendar table was created using the following DAX expression:  ![here](DAXcode)
