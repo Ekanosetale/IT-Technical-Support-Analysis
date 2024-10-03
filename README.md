@@ -4,7 +4,7 @@
 
 This report provides a comprehensive analysis of technical support operations based on the dataset provided. The objective is to examine key performance indicators (KPIs) related to ticket volume, content, resolution, and overall performance, in line with the focus areas outlined in the brief. The report will highlight trends in ticket creation, resolution times, agent performance, and adherence to Service Level Agreements (SLAs).
 
-**About The Dataset**
+**Data Overview**
 
 The dataset used for this analysis was the Onyx DataDNA Monthly Challenge dataset for May 2024, provided on the website. This challenge is designed to help explore and understand the functioning of a technical support center by focusing on key performance indicators (KPIs) relevant to the volume, content, and resolution of support tickets. The insights gained from this analysis can be used to improve support efficiency, customer satisfaction, and overall service quality.
 
