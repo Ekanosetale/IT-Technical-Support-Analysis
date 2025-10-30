@@ -6,7 +6,7 @@ This report provides a comprehensive analysis of technical support operations ba
 
 **Data Overview**
 
-The dataset used for this analysis was the Onyx DataDNA Monthly Challenge dataset for May 2024, provided on the website. This challenge is designed to help explore and understand the functioning of a technical support center by focusing on key performance indicators (KPIs) relevant to the volume, content, and resolution of support tickets. The insights gained from this analysis can be used to improve support efficiency, customer satisfaction, and overall service quality.
+This project is designed to help explore and understand the functioning of a technical support center by focusing on key performance indicators (KPIs) relevant to the volume, content, and resolution of support tickets. The insights gained from this analysis can be used to improve support efficiency, customer satisfaction, and overall service quality.
 
 The dataset contains 2,330 entries and 22 columns related to technical support ticket management. Here are the columns:
 
